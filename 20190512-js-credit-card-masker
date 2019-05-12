@@ -1,0 +1,43 @@
+// javascript practice from codewars
+
+// what did I learn? from the most popular solution, my solution did not include an regex, so I had to reacquiant myself with those
+
+// return masked string
+function maskify(cc) {
+  // separate cc into individual pieces
+  var split = cc.split("");
+  // find how many pieces there are
+  var length = split.length;
+  // establish a holding place for the new string
+  var masked = [];
+  
+  // if the length of the entry is exactly 4, return the entry
+  if (length === 4) {
+    var maskified = cc;
+  } 
+  
+  // if the length is more than 4, return #+the final four
+  else if (length > 4) {
+  for (i = 0; i < (length-4); i++) {
+  masked.push("#");
+  }
+  
+  masked.push(split[length-4]);
+  masked.push(split[length-3]);
+  masked.push(split[length-2]);
+  masked.push(split[length-1]);
+  
+  var maskified = masked.join("");
+  
+  }
+  
+  // or if it's less than 4, return the entry
+  else if (length < 4) {
+    var maskified = cc;
+  }
+  
+  // return the desired masked effect
+  return maskified;
+  
+  
+}
