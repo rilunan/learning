@@ -1,0 +1,25 @@
+//not the briefest or most elegant of codes; I could have used Math.floor
+
+function divisors(integer) {
+  var divisors = [];
+  var prime = 2;
+  
+  // check for factors
+  for (i = 2; i < integer; i++) {
+    // if it factors, add the divisor to the array
+    if (integer % i === 0) {
+      divisors.push(i);
+    } 
+    // otherwise add to the prime counter
+    else {
+      prime++
+    }
+  }
+  
+  if (prime === integer) {
+    return integer + " is prime";
+  } else {
+  divisors.sort(function(a,b){return a-b});
+  return divisors
+  }
+};
