@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Board Game Calculators</title>
+<style>
+* {box-sizing: border-box}
+body {
+	font-family: 'Overpass Mono', monospace;
+}
+ul.nav_bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8257fd;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li.nav_link {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li.nav_link:last-child {
+  border-right: none;
+}
+
+li.nav_link a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.nav_link a:hover {
+  background-color: #15014c;
+}
+.intro{
+  min-height: 55vh;
+  padding-top: 45vh;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+.active{
+  background-color: #8257fd;
+}
+
+
+/*@media screen and (max-width: 600px){
+    ul.nav-bar li.right, 
+    ul.nav-bar li {float: none;}
+}*/
+  
+/*.container-fluid {
+  background-image: linear-gradient(to bottom right, #FD7457, #ff944d);
+  font-family: 'Cutive Mono', monospace;
+</style>
+</head>
+<body>
+ <!--Navigation Bar-->
+
+   <nav id="nav-bar">
+    <ul class="nav_bar">
+      <li class='nav_link'><a href="/">Home</a></li>
+      <li class='nav_link'><a href="/badger">Badger</a></li>
+      <li class='nav_link'><a href="/board-games">Board Game Rules Videos</a></li>
+      <li class='nav_link'><a class="nav_link" href="/">Board Game Scoring Calculators</a></li>
+    </ul>      
+</nav> 
+
+    <div id="1">
+  <a href="/clans"> <img id="clans" src="clans.jpg" onmouseover="hoverClans(this);" onmouseout="unhoverClans(this);"style="width:100%"/></a>
+    </div>
+
+<br>
+
+    <div id="2">
+  <a href="/gwt"> <img id="gwt" src="gwt.jpg" onmouseover="hoverGwt(this);" onmouseout="unhoverGwt(this);"style="width:100%"/></a>
+    </div>
+
+<br>
+
+    <div id="3">
+  <a href="/scythe"><img src="scythe.jpg" onmouseover="hoverScythe(this);" onmouseout="unhoverScythe(this);" style="width:100%"></a>
+    </div>
+
+<script>
+
+function hoverClans(element) {
+  element.setAttribute('src', 'clans-fade.jpg');
+}
+
+function unhoverClans(element) {
+  element.setAttribute('src', 'clans.jpg');
+}
+
+function hoverGwt(element) {
+  element.setAttribute('src', 'gwt-fade.jpg');
+}
+
+function unhoverGwt(element) {
+  element.setAttribute('src', 'gwt.jpg');
+}
+
+function hoverScythe(element) {
+  element.setAttribute('src', 'scythe-fade.jpg');
+}
+
+function unhoverScythe(element) {
+  element.setAttribute('src', 'scythe.jpg');
+}
+
+
+</script>
+
+</body>
