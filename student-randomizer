@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Random Student Generator</title>
+<style>
+* {box-sizing: border-box}
+body {
+	font-family: 'Overpass Mono', monospace;
+}
+ul.nav_bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8257fd;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li.nav_link {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li.nav_link:last-child {
+  border-right: none;
+}
+
+li.nav_link a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.nav_link a:hover {
+  background-color: #15014c;
+}
+.intro{
+  min-height: 55vh;
+  padding-top: 45vh;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+.active{
+  background-color: #8257fd;
+}
+
+
+/*@media screen and (max-width: 600px){
+    ul.nav-bar li.right, 
+    ul.nav-bar li {float: none;}
+}*/
+  
+/*.container-fluid {
+  background-image: linear-gradient(to bottom right, #FD7457, #ff944d);
+  font-family: 'Cutive Mono', monospace;
+</style>
+</head>
+<body>
+
+     <!--Navigation Bar--
+
+   <nav id="nav-bar">
+    <ul class="nav_bar">
+      <li class='nav_link'><a href="/">Home</a></li>
+      <li class='nav_link'><a href="/badger">Badger</a></li>
+      <li class='nav_link'><a href="/board-games">Board Game Rules Videos</a></li>
+      <li class='nav_link'><a href="/calculators">Board Game Scoring Calculators</a></li>
+      <li class='nav_link'><a href="/teaching">Teaching Tools</a></li>
+    </ul>        
+</nav>
+ <!-- title -->
+<h1 id="title">Student generator</h1>
+
+<!-- display -->
+<h3>Click the button for a new name</h3>
+
+<div class="generator" id="calculator-shell">
+  <div class="keys"> 
+    <button class="key--prompt" data-action="who">Whose turn is it?</button><br><br>
+     </div>
+</div> 
+
+<br>
+<br>
+<br>
+<div class="calculator__keys">
+<table id="student-names" style="width:100%">
+  <caption>Student names</caption>
+  <tr>
+    <td id="s01" data-action="s01">Anna</td>
+    <td id="s02" data-action="s02">Brian</td>
+  </tr>
+  <tr>
+    <td id="s03" data-action="s03">Catherine</td>
+    <td id="s04" data-action="s04">Daisy</td>
+  </tr>
+  <tr>
+    <td id="s05" data-action="s05">Emma</td>
+    <td id="s06" data-action="s06">Floss</td>
+  </tr>
+  <tr>
+    <td id="s07" data-action="s07">Gob</td>
+    <td id="s08" data-action="s08">Howdy</td>
+  </tr>
+  <tr>
+    <td id="s09" data-action="s09">Illinois</td>
+    <td id="s10" data-action="s10">Jur</td>
+  </tr>
+  
+</table>
+</div>
+
+<script>
+
+const generator = document.querySelector('.generator')
+const keys = generator.querySelector('.keys')
+const prompt = document.querySelector('.key--prompt')
+
+
+keys.addEventListener('click', e =>{
+  if (e.target.matches('button')) {
+    const key = e.target
+    const action = key.dataset.action
+    const promptContent = prompt.textContent
+    const keyContent = key.textContent
+    
+    // beginning
+    if (action === 'who') {
+      console.log("who");
+      let num = Math.floor((Math.random() * 10) + 1);
+      console.log(num);
+      if (num === 10) {
+        numb = s10.textContent;
+      } else {
+        var id = "s0"+num;
+        var element = document.getElementById(id);
+        var numb = element.textContent;
+      }
+      console.log(numb);
+      prompt.textContent = numb;
+    }
+  }
+})
+
+
+
+</script>
+
+</body>
